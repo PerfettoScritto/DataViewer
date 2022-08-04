@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+</head>
+<body>
+	<style>
+	   body {
+
+	   	color: gray;
+	   	background-color: orange;
+	   }
+	   div{
+	   	background-color: white;
+	   	opacity:  0.9;
+	   	width:  700px;
+	   	margin:  0 auto;
+	   	padding-left: 10px;
+	    padding-bottom: 2px;
+
+	   }
+	   img {
+	   	opacity:  1;
+	   	width: 300px;
+	   }
+	   h1 { font-size:15px; }
+	   input{
+	   	margin: 15px;
+	   	padding: 4px;
+	   }
+	   input[type=submit] {
+	   margin-right: 30px;
+	   }
+
+	   .carInfo{
+	   	width: 312px;
+	   	border: 1px solid #ebebeb;
+	   }
+	   .carInfo>img {
+	   	border : 2px solid #f1efef;
+	   }
+	   p{
+	   	padding: 5px;
+	   	background-color: #e3d5ca;
+	   	color: black;
+	   }
+	   input[type="file"] {
+	   	padding: 5px;
+	   }
+/*	   label {
+  background-color: #8080804d;
+  color: black;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}*/
+	</style>
+	<!-- jnlnlknlk -->
+<div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	 <input type="text" placeholder="номер машины" >
+	  <input type="text" placeholder="марка машины" >
+	   <input type="text" placeholder="цвет машины"  >
+	   <input type="submit">
+	   <input type="file" id="actual-btn"/>
+	   <!-- <label for="actual-btn">Выбрать файл</label> -->
+	<div class="carInfo">
+   <!-- <h1> Car Information</h1> -->
+    <p></p>
+    <p></p>
+    <p></p>
+   <img src="https://avatars.mds.yandex.net/i?id=233fc2f56f772a40c7e377ad0428c870-5704191-images-thumbs&n=13&exp=1" alt="">
+   
+   </div>
+  <!--  <div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1> -->
+<script>
+	var car = [{
+		number : "Т366УР",
+		color: "BLACK1",
+		brand : "BMW",
+		imageSRC: "https://avatars.mds.yandex.net/i?id=233fc2f56f772a40c7e377ad0428c870-5704191-images-thumbs&n=13&exp=1"}, {
+       
+        number : "ZM256DG",
+		color: "RED4",
+		brand : "Lada X-ray",
+		imageSRC: "https://a.d-cd.net/33825e6s-960.jpg"
+
+	}];
+
+	console.log(car);
+
+	var helloBl= document.getElementsByTagName("p")[0];
+	helloBl.innerHTML="номер машины :" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + car[0].number ;
+	var brandCar =document.getElementsByTagName("p")[1];
+	brandCar.innerHTML ="марка машины :" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " +  "\"" + car[0].brand +"\"";
+	var colorCar = document.getElementsByTagName("p")[2];
+	colorCar.innerHTML = "цвет машины :" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + "\"" +car[0].color + "\"";
+    var carInfo=  document.getElementsByClassName("carInfo")[0];
+    console.log(carInfo);
+    var imgCar = carInfo.getElementsByTagName('img')[0];
+	// const imgCar =document.createElement(img);
+	// console.log("imgCar");
+	imgCar.src =car[1].imageSRC;
+	// carInfo.appendChild(imgCar);
+
+
+
+	// console.log(imageCar);
+	// console.log(imgCar.src);
+
+</script>
+</body>
+</html>
+
